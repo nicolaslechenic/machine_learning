@@ -1,0 +1,8 @@
+game:
+  value: "THE GAME said %<value>s"
+  status: "THE GAME |%<game_score>i| vs %<bot_name>s |%<bot_score>i|"
+bot:
+  play: "%<name>s answered %<answer>s"
+  accuracy: "Accuracy: %<accuracy>f"
+  loose: "%<name>s loose :("
+  win: "%<name>s win =)"
