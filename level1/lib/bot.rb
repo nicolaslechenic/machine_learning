@@ -7,7 +7,7 @@ class Bot
   }.freeze
 
   class << self
-    # return ying or yang randomly
+    # return yin or yang randomly
     def random_decision
       Game.value_to_word(rand(0..1).to_f)
     end
@@ -48,14 +48,14 @@ class Bot
     (won.to_f / (won + lost)) * 100
   end
 
-  # Answer ying or yang randomly if the evaluated reward
-  # between the words are too close (REWARD_DIFF_TOLERANCE)
+  # Answer yin or yang randomly if the evaluated difference of
+  # reward are too close (REWARD_DIFF_TOLERANCE)
   # else returns the word estimated as being the one with
   # the biggest reward
   #
-  # @param [String] game say ying or yang
-  # @return [String] bot answer ying or yang
-  def answer_ying_or_yang(game_key)
+  # @param [String] game say yin or yang
+  # @return [String] bot answer yin or yang
+  def answer_yin_or_yang(game_key)
     available_combos  = self.class.available_combos(game_key)
     estimates         = estimates(available_combos)
     min_value         = estimates.min.first
@@ -68,7 +68,7 @@ class Bot
     end
   end
 
-  # return ying or yang after evaluation
+  # return yin or yang after evaluation
   def take_decision(estimates, available_combos)
     max_index = estimates.index(estimates.max)
 

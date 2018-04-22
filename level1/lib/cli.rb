@@ -6,6 +6,8 @@ module BotVsGame
     map %w[-p --play] => :play
     # TODO: need some clean/refacto/doc
     def play(nb_games = 100, bot_name = 'Elvis')
+      Feedback.remove_json_content
+
       nb_games        = nb_games.to_i
       bot             = Bot.new(bot_name)
       array_of_words  = []
@@ -16,8 +18,8 @@ module BotVsGame
         game = Game.new
 
         array_of_words << [
-          game.say_ying_or_yang,
-          bot.answer_ying_or_yang(game.say_ying_or_yang)
+          game.say_yin_or_yang,
+          bot.answer_yin_or_yang(game.say_yin_or_yang)
         ]
 
         reward = Game.reward(array_of_words.last)
@@ -25,7 +27,7 @@ module BotVsGame
 
         reward.zero? ? bot.loose : bot.win
 
-        Displayer.feedback(bot, reward, array_of_words.last)
+        Feedback.export_json(bot, array_of_words.last)
 
         combos = array_of_words.map { |words| Game.words_to_values(words) }
         train_datas = Bot.train(combos, rewards)

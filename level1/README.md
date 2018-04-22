@@ -33,6 +33,10 @@ This repo use the gem Thor as CLI so, you can see the options by typing:
 ruby bot_vs_game.rb -h
 ```
 
+### Replayer
+
+Coming soon...
+
 #### Run the test suite
 
 Each level contains test files so if you want to check, it's easy:
