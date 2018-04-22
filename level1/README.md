@@ -1,4 +1,4 @@
-<h1 align="center">YING YANG<br/>(Level 1: the easiest game ever)</h1>
+<h1 align="center">YIN YANG<br/>(Level 1: the easiest game ever)</h1>
 
 <br/>
 
@@ -11,7 +11,7 @@
 </div>
 
 
-This first bot vs game is the easiest game ever. When the game say ying or yang, the bot must complet the circle by saying the opposit !
+This first bot vs game is the easiest game ever. When the game say yin or yang, the bot must complet the circle by saying the opposit !
 
 ## Steps
 
