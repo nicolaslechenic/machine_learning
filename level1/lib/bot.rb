@@ -80,14 +80,4 @@ class Bot
   def estimates(available_choices)
     available_choices.map { |words| brain.run(Game.words_to_values(words)) }
   end
-
-  def status_color
-    if percent_of_wins > 80
-      :green
-    elsif percent_of_wins > 50
-      :yellow
-    else
-      :red
-    end
-  end
 end
