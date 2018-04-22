@@ -1,4 +1,4 @@
-%w[colorize csv json ruby-fann pry thor yaml].each { |gem_name| require gem_name }
+%w[json ruby-fann pry thor yaml].each { |gem_name| require gem_name }
 
 %w[cli bot feedback game].each do |file_name|
   require "./lib/#{file_name}"
